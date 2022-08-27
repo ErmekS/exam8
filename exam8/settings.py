@@ -54,7 +54,7 @@ ROOT_URLCONF = 'exam8.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
+        'DIRS': [BASE_DIR / 'webapp/migrations/../webapp/templates']
         ,
         'APP_DIRS': True,
         'OPTIONS': {

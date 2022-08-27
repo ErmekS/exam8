@@ -4,6 +4,7 @@ from webapp.views import IndexView, ProductView, ProductCreateView, ProductUpdat
 
 # from webapp.views import IndexView, ProductView, ProductCreateView, ProductUpdateView, ProductDeleteView, CartAddView, \
 #     CartView, CartDeleteView, CartDeleteOneView, OrderCreate
+from webapp.views.reviews import CreateReviewView, UpdateReview, DeleteReview
 
 app_name = "webapp"
 
@@ -18,4 +19,7 @@ urlpatterns = [
     # path('cart/<int:pk>/delete/', CartDeleteView.as_view(), name='remove_for_cart'),
     # path('cart/<int:pk>/one-delete/', CartDeleteOneView.as_view(), name='remove_one_for_cart'),
     # path('order/create/', OrderCreate.as_view(), name='order_create')
+    path('product/<int:pk>/review/add/', CreateReviewView.as_view(), name="product_review_create"),
+    path('reviews/<int:pk>/update/', UpdateReview.as_view(), name="update_review"),
+    path('reviews/<int:pk>/delete/', DeleteReview.as_view(), name="delete_review"),
 ]
